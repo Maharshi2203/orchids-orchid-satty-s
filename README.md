@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Satty's Food Distributor
 
-## Getting Started
+A modern, premium e-commerce web application for Satty's - Gujarat's #1 Food Distributor, built with Next.js 15, React 19, and Supabase.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15.5.7-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19.0.0-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC?logo=tailwind-css)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+### 🛍️ Customer Features
+- **Product Catalog** - Browse products by categories
+- **Featured Products** - Highlighted premium products
+- **Contact Page** - Multiple ways to connect (Phone, Email, WhatsApp, Social Media)
+- **Responsive Design** - Works on all devices
+
+### 🔐 Admin Panel (`/admin`)
+- **Dashboard** - Overview of products, categories, and messages
+- **Product Management** - Add, edit, delete products with Excel/CSV import
+- **Category Management** - Organize products into collections
+- **Contact Messages** - View customer inquiries
+- **Shop Info** - Manage store settings
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ (or Bun)
+- npm or bun package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd orchids-orchid-satty-s-main
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install --legacy-peer-deps
+   # or
+   bun install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env.local` file with:
+   ```env
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+   JWT_SECRET=your_jwt_secret
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
+
+5. **Open the app**
+   - Website: [http://localhost:3000](http://localhost:3000)
+   - Admin Panel: [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
+
+### Default Admin Credentials
+```
+Username: admin
+Password: admin123
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── admin/           # Admin panel routes
+│   │   ├── (dashboard)/ # Dashboard, Products, Categories, etc.
+│   │   └── login/       # Admin login page
+│   ├── api/             # API routes
+│   │   ├── auth/        # Authentication endpoints
+│   │   ├── products/    # Product CRUD
+│   │   ├── categories/  # Category CRUD
+│   │   ├── contacts/    # Contact messages
+│   │   └── dashboard/   # Dashboard stats
+│   ├── contact/         # Contact page
+│   ├── products/        # Products page
+│   └── page.tsx         # Homepage
+├── components/          # Reusable UI components
+└── lib/                 # Utilities and configurations
+    ├── supabase.ts      # Supabase client
+    ├── auth.ts          # Authentication helpers
+    └── types.ts         # TypeScript types
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 15** | React framework with App Router |
+| **React 19** | UI library |
+| **TypeScript** | Type safety |
+| **Tailwind CSS 4** | Styling |
+| **Supabase** | PostgreSQL database & auth |
+| **Framer Motion** | Animations |
+| **Radix UI** | Accessible components |
+| **Lucide React** | Icons |
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with Turbopack |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗄️ Database Schema
 
-## Deploy on Vercel
+### Tables
+- `admin_users` - Admin authentication
+- `products` - Product catalog
+- `categories` - Product categories
+- `contact_messages` - Customer inquiries
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Phone:** +91 8200892368
+- **Email:** customersupport@sattys.in
+- **Instagram:** [@sattys.in](https://instagram.com/sattys.in)
+- **WhatsApp:** [Direct Chat](https://wa.me/918200892368)
+
+## 📄 License
+
+This project is proprietary software for Satty's Food Distributor.
+
+---
+
+Made with ❤️ for Satty's - Gujarat's #1 Food Distributor
